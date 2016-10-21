@@ -185,7 +185,7 @@ public class Mems_Cardio
   }
 	  int[10] cap = [8200,16000,22000,26000,30000,20000,3100];
 	  HashMap<Integer,String> hcap = new HashMap<Integer,String>();
-	 for(i=0;i<cap.length;i++) {
+	 for(int i=0;i<cap.length;i++) {
 	         if (hcap.get(cap[i]) == null)
               hcap.put(cap[i], "start");
                  else if (hcap.get(cap[i]) == 8200)
@@ -244,13 +244,27 @@ public class Mems_Cardio
 		 sys_dia=Dia_calc_sys(norm_sys_rtt,US_vel);
 		 System.out.println("The roundtrip time obtained is reduced due to plaque and hence the systolic blood vessel diameter: "+sys_dia);	
 	 }
-	 
+	 List<float> sys_rtt = new ArrayList<float>;
+	 while(1){
+         int j=0;
+	 float[] store_sys 
+	 store_sys[i] = sys_rtt.(sys_dia);
+	 Collections.sort(sys_rtt);
+	 j++
+	 }
 	 if(norm_dias_rtt <=4.8 && (fat_dias_rtt>5.1 && fat_dias_rtt<5.4))
 	 {
 		 dias_dia=Dia_calc_dias(norm_dias_rtt,US_vel);
 		 System.out.println("The roundtrip time obtained is reduced due to plaque and hence the diastolic blood vessel diameter: "+dias_dia);	
 	 }
-	 
+	  List<float> dias_rtt = new ArrayList<float>;
+	 while(1){
+	 int k=0;
+	 float[] store_dias;
+	 store_dias[i] = dias_rtt.(dias_dia);
+	 Collections.sort(dias_rtt);
+	 k++;
+	 }
          System.out.println("Scan for blood pressure by nanorobot\n");
          cardiac_op = blood_pressure(sys,dias);
          System.out.println("The cardiac output: "+cardiac_op);
