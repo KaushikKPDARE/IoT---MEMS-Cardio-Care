@@ -245,10 +245,19 @@ public class Mems_Cardio
 		 System.out.println("The roundtrip time obtained is reduced due to plaque and hence the systolic blood vessel diameter: "+sys_dia);	
 	 }
 	 List<float> sys_rtt = new ArrayList<float>;
+	 int count_sys = 0;
 	 while(1){
          int j=0;
 	 float[] store_sys;
 	 store_sys[i] = sys_rtt.(sys_dia);
+		 if(store_sys[i]<=3.7)
+		 {
+			count_sys++;
+			 if(count_sys>5)
+			 {
+			   System.out.println("Alert Message to Doctor");	 
+			 }
+		 }
 	 Collections.sort(sys_rtt);
 	 j++
 	 }
@@ -258,10 +267,19 @@ public class Mems_Cardio
 		 System.out.println("The roundtrip time obtained is reduced due to plaque and hence the diastolic blood vessel diameter: "+dias_dia);	
 	 }
 	  List<float> dias_rtt = new ArrayList<float>;
+	  int count_dias = 0;
 	 while(1){
 	 int k=0;
 	 float[] store_dias;
 	 store_dias[i] = dias_rtt.(dias_dia);
+		  if(store_dias[i]<=4.8)
+		 {
+			count_dias++;
+			 if(count_dias>5)
+			 {
+			   System.out.println("Alert Message to Doctor");	 
+			 }
+		 }
 	 Collections.sort(dias_rtt);
 	 k++;
 	 }
