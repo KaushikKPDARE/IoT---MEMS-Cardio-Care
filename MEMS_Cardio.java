@@ -183,6 +183,31 @@ public class Mems_Cardio
          System.out.println("The plaque has been removed: "+plaque_removed);	
       }
   }
+	  int[10] cap = [8200,16000,22000,26000,30000,20000,3100];
+	  HashMap<Integer,String> hcap = new HashMap<Integer,String>();
+	 for(i=0;i<cap.length;i++) {
+	         if (hcap.get(cap[i]) == null)
+              hcap.put(cap[i], "start");
+                 else if (hcap.get(cap[i]) == 8200)
+              hcap.put(arr[i], "Femoral Artery");
+		 else if (hcap.get(cap[i]) == 16000)
+              hcap.put(arr[i], "Common Iliac Artery");
+		 else if (hcap.get(cap[i]) == 22000)
+              hcap.put(arr[i], "Abdominal Aorta");
+		 else if (hcap.get(cap[i]) == 26000)
+              hcap.put(arr[i], "Descending Aorta");
+		 else if (hcap.get(cap[i]) == 30000)
+              hcap.put(arr[i], "Aortic Arch");
+		 else if (hcap.get(cap[i]) == 20000)
+              hcap.put(arr[i], "Ascending Aorta");
+		 else if (hcap.get(cap[i]) == 3100)
+              hcap.put(arr[i], "Coronary Artery");
+	  }
+	  for(Map.Entry m:hcap.entrySet())
+	  {
+	     System.out.println("For diameter" + m.getKey() + ", the corresponding vessel is" + m.getValue());  
+	  }
+	 
  }
  attachment=1;
  System.out.println("The nanorobot has been successfully attached to the walls of the Coronary Artery\n");
