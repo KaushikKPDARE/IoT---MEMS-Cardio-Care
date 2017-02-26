@@ -183,7 +183,7 @@ public class Mems_Cardio
          System.out.println("The plaque has been removed: "+plaque_removed);	
       }
   }
-	  int[10] cap = [8200,16000,22000,26000,30000,20000,3100];
+	/*  int[10] cap = [8200,16000,22000,26000,30000,20000,3100];
 	  HashMap<Integer,String> hcap = new HashMap<Integer,String>();
 	 for(int i=0;i<cap.length;i++) {
 	         if (hcap.get(cap[i]) == null)
@@ -206,7 +206,7 @@ public class Mems_Cardio
 	  for(Map.Entry m:hcap.entrySet())
 	  {
 	     System.out.println("For diameter" + m.getKey() + ", the corresponding vessel is" + m.getValue());  
-	  }
+	  }*/
 	 
  }
  attachment=1;
